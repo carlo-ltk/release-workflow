@@ -11,5 +11,5 @@ jobs:
 
     steps:
       - name: Warm up
-        run: echo {{ github.ref }}
+        run: echo "Warming up for release ${{ github.ref }}"
       
