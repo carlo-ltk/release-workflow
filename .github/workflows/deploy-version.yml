@@ -12,4 +12,7 @@ jobs:
     steps:
       - name: Warm up
         run: echo "Warming up for release ${{ github.ref }}"
+      - name: Parsing test
+        run: echo ${{ github.ref }} | sed -e "s/^refs\/tags\/v//" | sed -r "s/\./d/g"
+
       
